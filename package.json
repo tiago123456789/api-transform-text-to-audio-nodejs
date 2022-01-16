@@ -1,0 +1,31 @@
+{
+  "name": "poc-transform-ebook-to-audibook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start 'node ./src/index.js' --name api -i 4",
+    "job": "pm2 start 'node ./src/jobs/index.js' --name jobs",
+    "start:dev": "nodemon ./src/index.js",
+    "jobs:dev": "nodemon ./src/jobs/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1048.0",
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "bull": "^4.2.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "faunadb": "^4.4.1",
+    "ioredis": "^4.28.3",
+    "jsonwebtoken": "^8.5.1",
+    "pdf2json": "^2.0.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
